@@ -1,0 +1,419 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --margin-bottom: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png');
+  background-size: cover;
+}
+
+#infos img {
+  max-width: 40vw;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin-bottom: var(--margin-bottom);
+}
+
+h1, h2, h3 {
+  font-family: 'Exo', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem 0 3rem 0;
+  background-color: white;
+  border-radius: 0 0 30px 30px;
+}
+
+h3 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+h1 span {
+  color: #616161;
+}
+
+p {
+  margin-bottom: var(--margin-bottom);
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.w-50 {
+  padding: 0.5rem;
+  width: calc(50% - 20px);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.text-center {
+  text-align: center;
+}
+
+ul.specifications {
+  background-color: #30a7d7;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  list-style-position: inside;
+  border-radius: 8px;
+  gap: 0.7rem;
+  margin-bottom: var(--margin-bottom);
+}
+
+ul.specifications li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+ul.specifications li strong {
+  font-family: 'Exo', sans-serif;
+  font-weight: 500;
+}
+
+ul.specifications li span {
+  font-family: 'Exo', sans-serif;
+  color: white;
+  font-size: 0.9rem;
+}
+
+ul.type-list {
+  margin-bottom: var(--margin-bottom);
+  list-style: none;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.type-list li > *, .weakness-list li > * {
+  display: block;
+  min-width: 90px;
+  border-radius: 5px;
+  border: none;
+  padding: 0.2rem 0;
+  text-align: center;
+}
+
+.normal {
+  background-color: #A1A3A1;
+  color: white;
+}
+
+.electric {
+  background-color: #F3C110;
+  color: white;
+}
+
+.grass {
+  background-color: #4DA325;
+  color: white;
+}
+
+.ice {
+  background-color: #6DD9FD;
+  color: white;
+}
+
+.fighting {
+  background-color: #EB7F25;
+  color: white;
+}
+
+.psychic {
+  background-color: #E73D7A;
+  color: white;
+}
+
+.ghost {
+  background-color: #703F71;
+  color: white;
+}
+
+.dragon {
+  background-color: #4F60E2;
+  color: white;
+}
+
+.dark {
+  background-color: #4F3F3D;
+  color: white;
+}
+
+.fairy {
+  background-color: #EB70EF;
+  color: white;
+}
+
+.poison {
+  background-color: #933ECC;
+  color: white;
+}
+
+.bug {
+  background-color: #B7C548;
+  color: white;
+}
+
+.steel {
+  background-color: #B7B7C5;
+  color: white;
+}
+
+.fire {
+  background-color: #E62E2D;
+  color: white;
+}
+
+.flying {
+  background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  color: white;
+}
+
+.water {
+  background-color: #4381EF;
+  color: white;
+}
+
+.ground {
+  background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  color: white;
+}
+
+.rock {
+  background-color: #a38c21;
+  color: white;
+}
+
+.stats {
+  background-color: #a4a4a4;
+  border-radius: 5px;
+  padding: 0.5rem;
+  max-width: 40vw;
+  margin: auto;
+}
+
+.stats h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  margin-left: 0.2rem;
+}
+
+.stats > div {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(15, 0.5rem) 1fr;
+  gap: 0.3rem 0;
+}
+
+.stats > div > div:not(:nth-of-type(16n)) {
+  background-color: #fff;
+  height: 0.5rem;
+  margin: 0.2rem 0.2rem;
+}
+
+.stats > div > div:nth-of-type(16n) {
+  font-size: 0.6em;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.stats.hp-1 > div > div:nth-of-type(1n + 15):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-2 > div > div:nth-of-type(1n + 14):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-3 > div > div:nth-of-type(1n + 13):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-4 > div > div:nth-of-type(1n + 12):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-5 > div > div:nth-of-type(1n + 11):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-6 > div > div:nth-of-type(1n + 10):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-7 > div > div:nth-of-type(1n + 9):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-8 > div > div:nth-of-type(1n + 8):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-9 > div > div:nth-of-type(1n + 7):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-10 > div > div:nth-of-type(1n + 6):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-11 > div > div:nth-of-type(1n + 5):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-12 > div > div:nth-of-type(1n + 4):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-13 > div > div:nth-of-type(1n + 3):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-14 > div > div:nth-of-type(1n + 2):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+.stats.hp-15 > div > div:nth-of-type(1n + 1):not(:nth-of-type(1n+16)) { background-color: #30a7d7; }
+
+.stats.attack-1 > div > div:nth-of-type(1n + 31):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-2 > div > div:nth-of-type(1n + 30):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-3 > div > div:nth-of-type(1n + 29):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-4 > div > div:nth-of-type(1n + 28):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-5 > div > div:nth-of-type(1n + 27):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-6 > div > div:nth-of-type(1n + 26):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-7 > div > div:nth-of-type(1n + 25):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-8 > div > div:nth-of-type(1n + 24):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-9 > div > div:nth-of-type(1n + 23):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-10 > div > div:nth-of-type(1n + 22):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-11 > div > div:nth-of-type(1n + 21):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-12 > div > div:nth-of-type(1n + 20):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-13 > div > div:nth-of-type(1n + 19):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-14 > div > div:nth-of-type(1n + 18):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+.stats.attack-15 > div > div:nth-of-type(1n + 17):not(:nth-of-type(1n+32)) { background-color: #30a7d7; }
+
+.stats.defense-1 > div > div:nth-of-type(1n + 47):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-2 > div > div:nth-of-type(1n + 46):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-3 > div > div:nth-of-type(1n + 45):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-4 > div > div:nth-of-type(1n + 44):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-5 > div > div:nth-of-type(1n + 43):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-6 > div > div:nth-of-type(1n + 42):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-7 > div > div:nth-of-type(1n + 41):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-8 > div > div:nth-of-type(1n + 40):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-9 > div > div:nth-of-type(1n + 39):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-10 > div > div:nth-of-type(1n + 38):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-11 > div > div:nth-of-type(1n + 37):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-12 > div > div:nth-of-type(1n + 36):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-13 > div > div:nth-of-type(1n + 35):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-14 > div > div:nth-of-type(1n + 34):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+.stats.defense-15 > div > div:nth-of-type(1n + 33):not(:nth-of-type(1n+48)) { background-color: #30a7d7; }
+
+.stats.special-attack-1 > div > div:nth-of-type(1n + 63):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-2 > div > div:nth-of-type(1n + 62):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-3 > div > div:nth-of-type(1n + 61):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-4 > div > div:nth-of-type(1n + 60):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-5 > div > div:nth-of-type(1n + 59):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-6 > div > div:nth-of-type(1n + 58):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-7 > div > div:nth-of-type(1n + 57):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-8 > div > div:nth-of-type(1n + 56):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-9 > div > div:nth-of-type(1n + 55):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-10 > div > div:nth-of-type(1n + 54):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-11 > div > div:nth-of-type(1n + 53):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-12 > div > div:nth-of-type(1n + 52):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-13 > div > div:nth-of-type(1n + 51):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-14 > div > div:nth-of-type(1n + 50):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+.stats.special-attack-15 > div > div:nth-of-type(1n + 49):not(:nth-of-type(1n+64)) { background-color: #30a7d7; }
+
+.stats.special-defense-1 > div > div:nth-of-type(1n + 79):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-2 > div > div:nth-of-type(1n + 78):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-3 > div > div:nth-of-type(1n + 77):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-4 > div > div:nth-of-type(1n + 76):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-5 > div > div:nth-of-type(1n + 75):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-6 > div > div:nth-of-type(1n + 74):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-7 > div > div:nth-of-type(1n + 73):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-8 > div > div:nth-of-type(1n + 72):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-9 > div > div:nth-of-type(1n + 71):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-10 > div > div:nth-of-type(1n + 70):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-11 > div > div:nth-of-type(1n + 69):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-12 > div > div:nth-of-type(1n + 68):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-13 > div > div:nth-of-type(1n + 67):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-14 > div > div:nth-of-type(1n + 66):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+.stats.special-defense-15 > div > div:nth-of-type(1n + 65):not(:nth-of-type(1n+80)) { background-color: #30a7d7; }
+
+.stats.speed-1 > div > div:nth-of-type(1n + 95):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-2 > div > div:nth-of-type(1n + 94):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-3 > div > div:nth-of-type(1n + 93):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-4 > div > div:nth-of-type(1n + 92):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-5 > div > div:nth-of-type(1n + 91):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-6 > div > div:nth-of-type(1n + 90):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-7 > div > div:nth-of-type(1n + 89):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-8 > div > div:nth-of-type(1n + 88):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-9 > div > div:nth-of-type(1n + 87):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-10 > div > div:nth-of-type(1n + 86):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-11 > div > div:nth-of-type(1n + 85):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-12 > div > div:nth-of-type(1n + 84):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-13 > div > div:nth-of-type(1n + 83):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-14 > div > div:nth-of-type(1n + 82):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+.stats.speed-15 > div > div:nth-of-type(1n + 81):not(:nth-of-type(1n+96)) { background-color: #30a7d7; }
+
+
+#evolution {
+  width: calc(90% - 10px);
+  background-color: rgba(60, 60, 60, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  margin: var(--margin-bottom) auto;
+}
+
+#evolution h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: 400;
+}
+
+#evolution > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#evolution > div > :not(.pokemon)::after {
+  font-family: bootstrap-icons !important;
+  content: "\f285";
+  color: white;
+  font-size: 3rem;
+}
+
+#evolution .pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#evolution .pokemon > img {
+  border-radius: 100%;
+  background-color: #616161;
+  width: 50%;
+  border: 0.3rem solid white;
+  box-shadow: 0 4px 4px 0px #212121;
+}
+
+#evolution .pokemon > span {
+  font-family: 'Exo', sans-serif;
+  color: white;
+}
+
+#evolution .pokemon > span > small {
+  font-family: 'Exo', sans-serif;
+  color: #a4acaf;
+  font-weight: 500;
+}
+
+#evolution .pokemon > button {
+  width: 7rem;
+  border-radius: 5px;
+  border: none;
+  padding: 0.2rem 0;
+}
+
+@media screen and (max-width: 500px) {
+  .flex > .w-50 {
+    width: 100%;
+  }
+
+  #evolution > div {
+    flex-direction: column;
+  }
+
+  #evolution > div > :not(.pokemon)::after {
+    content: "\F279";
+  }
+
+  #evolution .pokemon > button {
+    width: 100%;
+  }
+}
